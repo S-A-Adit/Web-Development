@@ -5,9 +5,6 @@ This space serves as a growing collection of my work in front-end, back-end, and
 * **Learning Journey:** A chronological or thematic showcase of my progress and skill development in web technologies.
 * **Code Examples:** Each project will include its own dedicated folder with all necessary code, assets, and a specific `README.md` detailing that project.
   
-## 📂 Projects
-
-* HTML QUIZ APPLICATION
 
 ## About This Repository
 This repository is designed to be a central hub for all my web development endeavors. Here's what you can expect to find:
@@ -15,3 +12,6 @@ This repository is designed to be a central hub for all my web development endea
 * **Learning Journey: A chronological or thematic showcase of my progress and skill development in web technologies.
 * **Code Examples: Each project will include its own dedicated folder with all necessary code, assets, and a specific README.md detailing that project.
 
+## 📂 Projects
+
+* HTML QUIZ APPLICATION
