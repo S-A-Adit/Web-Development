@@ -1,0 +1,192 @@
+:root{
+    --dark-background-color: #1F2937;
+    --hero-main-text-color:#F9FAF8;
+    --hero-secondary-text-color: #E5E7EB;
+    --header-logo-text-color:#F9FAF8;
+    --button-color: #3882F6;
+    --information-header-text-color: #1F2937;
+    --quote-section-text-color:#1F2937;
+    --quote-background-color: #E5E7EB; /* This should be E5E7EB based on the original design */
+}
+/* Basic Resets & Font Import */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif; /* Font used: Roboto */
+    line-height: 1.6;
+    color: var(--dark-background-color); /* Default text color */
+}
+.container{
+    max-width: 960px; /* Standard width for content */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add some padding on the sides */
+}
+/* Header/Hero Section */
+.hero-section{
+    background-color: var(--dark-background-color);
+    padding: 20px 0 80px; /* Top padding for header, bottom for hero content */
+    color: var(--hero-secondary-text-color); /* Default text color for this section */
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px; /* Space between header and hero main */
+}
+.header-logo{
+    font-size: 24px;
+    font-weight: 700; /* Adjusted for better visibility, original image said F9FAF8 for text color, not weight */
+    color: var(--header-logo-text-color);
+}
+.header-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.header-links a{
+    color: var(--hero-secondary-text-color);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero-main{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-text-content{
+    flex: 1; /* Takes available space */
+}
+.hero-text-content h1{
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--hero-main-text-color);
+    margin-bottom: 10px;
+}
+.hero-text-content p{
+    font-size: 18px;
+    color: var(--hero-secondary-text-color);
+    margin-bottom: 20px;
+}
+.hero-image-placeholder{
+    background-color: rgba(100,100,100,0.7);  /* Slightly darker gray for placeholder */
+    color:var(--hero-secondary-text-color);
+    width: 400px;  /* Fixed width as per design visual */
+    height: 200px; /* Fixed height as per design visual */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;  /* Prevents shrinking */
+}
+.sign-up-button{
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor:pointer;
+    transition: background-color 0.3s ease;
+}
+.sign-up-button:hover{
+    background-color: #2a6ed4; /* Slightly darker shade on hover */
+}
+/*Information Section*/
+.info-section{
+    padding: 80px 0;
+    text-align: center;
+}
+.info-section h2{
+    font-size: 36px;
+    font-weight: 900;
+    color:var(--information-header-text-color);
+    margin-bottom: 50px;
+}
+.info-cards{
+    display: flex;
+    justify-content: center;
+    gap:40px;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+.card{
+    width: 170px; /* Fixed width based on visual */
+    text-align: center;
+}
+.card-image-box{
+    width: 170px;
+    height: 170px;
+    border: 3px solid var(--button-color);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    background-color: #e0e0e0; /* Just a light gray visual fill */
+}
+.card-text{
+    font-size: 18px; /* Assuming 18px based on hero secondary text size */
+    color: var(--dark-background-color); /* Main text color */
+}
+.quote-section{
+    background-color: var(--quote-background-color);
+    padding: 100px 0;
+}
+.quote-text{
+    font-size: 36px;
+    font-weight: 300;/* light */ 
+    font-style: italic;
+    color: var(--quote-text-color);
+    max-width: 800px;/* Limit width for readability */
+    margin: 0 auto 15px; /* Center and add space below */
+}
+.quote-author{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: right;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--quote-text-color);
+}
+
+.call-to-action{
+    padding: 80px 0;
+}
+.cta-box{
+    background-color: var(--button-color);
+    color: white;
+    padding: 40px 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px; /* Space between text and button */
+}
+
+.cta-text h3{
+    font-size: 28px; 
+    margin-bottom: 5px;
+    color:white;
+}
+.cta-text p{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);  /* Slightly lower contrast as per hero secondary */
+}
+/* Override button border for CTA section */
+.cta-box .sign-up-button{
+    border: 2px solid white; /* White border for the button in this section */
+    background-color: transparent; /* Transparent background */
+}
+.cta-box .sign-up-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight white background on hover */
+}
+/* Footer */
+.footer-section {
+    background-color: var(--dark-background-color);
+    color: var(--hero-secondary-text-color);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 16px;
+}
