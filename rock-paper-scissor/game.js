@@ -28,17 +28,17 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-    console.log(`Human plays: ${humanChoice}`);
-    console.log(`Computer plays: ${computerChoice}`);
+    console.log('Human plays: ${humanChoice}');
+    console.log('Computer plays: ${computerChoice}');
 
     if ((humanChoice === "rock" && computerChoice === "scissors") || 
         (humanChoice === "paper" && computerChoice === "rock") || 
         (humanChoice === "scissors" && computerChoice === "paper")) {
         humanScore++;
-        console.log(`You win! ${humanChoice} beats ${computerChoice}`);  
+        console.log('You win! ${humanChoice} beats ${computerChoice}');  
     } else {
         computerScore++;
-        console.log(`You lose! ${computerChoice} beats ${humanChoice}`); 
+        console.log('You lose! ${computerChoice} beats ${humanChoice}'); 
     }
 }
   
@@ -48,22 +48,21 @@ function playGame() {
     console.log("--- Starting a new game of Rock, Paper, Scissors (Best of 5) ---");
     
     for (let i = 1; i <= 5; i++) {  
-        console.log(`\n--- Round ${i} ---`);
+        console.log('\n--- Round ${i} ---');
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
         
         while (humanSelection === computerSelection) {
-            console.log("It's a tie! Pick again.");
+            console.log("It's a tie (${ties}x)! Pick something different!");
             humanSelection = getHumanChoice();
-            computerSelection = getComputerChoice();
         }
         
         playRound(humanSelection, computerSelection);
     }
 
     console.log("\n--- Game Over! Final Scores ---");
-    console.log(`Human Score: ${humanScore}`);
-    console.log(`Computer Score: ${computerScore}`);
+    console.log('Human Score: ${humanScore}');
+    console.log('Computer Score: ${computerScore}');
 
     if (humanScore > computerScore) {
         console.log("Congratulations! You are the overall winner!");
