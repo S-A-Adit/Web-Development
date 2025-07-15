@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BookShelf</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">📖 BookShelf</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">My Books</a>
+      <a href="#">Explore</a>
+      <div class="icons">
+        <span class="bell">🔔</span>
+        <img class="avatar" src="download.jpg" alt="Profile"/>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="add-book">
+      <h1>Add a New Book</h1>
+      <form id="book-form">
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="Enter book title" />
+
+        <label for="author">Author</label>
+        <input type="text" id="author" placeholder="Enter author's name" />
+
+        <label for="status">Status</label>
+        <select id="status">
+          <option value="">Select status</option>
+          <option value="read">Read</option>
+          <option value="not-read">Not Read</option>
+        </select>
+
+        <button type="submit">Add Book</button>
+      </form>
+    </section>
+
+    <section class="book-list">
+      <h2>My Books</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The Secret Garden</td>
+            <td class="link">Frances Hodgson Burnett</td>
+            <td><span class="status read">Read</span></td>
+            <td><button class="delete-btn">Delete</button></td>
+          </tr>
+          <tr>
+            <td>Pride and Prejudice</td>
+            <td class="link">Jane Austen</td>
+            <td><span class="status not-read">Not Read</span></td>
+            <td><button class="delete-btn">Delete</button></td>
+          </tr>
+          <tr>
+            <td>To Kill a Mockingbird</td>
+            <td class="link">Harper Lee</td>
+            <td><span class="status read">Read</span></td>
+            <td><button class="delete-btn">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Future JavaScript functionality will go here -->
+  <script src="script.js"></script>
+</body>
+</html>

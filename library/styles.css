@@ -1,0 +1,151 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #1f1f1f;
+    padding-bottom: 40px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #1f1f1f;
+    font-weight: 500;
+}
+
+.navbar .icons {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Main container */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Add Book Form */
+.add-book h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    align-self: flex-start;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Book List */
+.book-list h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+td.link {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.status {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    background-color: #f3f3f3;
+}
+
+.status.read {
+    background-color: #e7f5e6;
+    color: #2c7a4f;
+}
+
+.status.not-read {
+    background-color: #fdf0e3;
+    color: #a85e00;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff3b3b;
+    font-weight: bold;
+    cursor: pointer;
+}
