@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Tic Tac Toe</h1>
+        <div class="scoreboard">
+            <div class="score x-score">
+                <span class="symbol">X</span>
+                <span class="score-count">0</span>
+            </div>
+            <div class="score o-score">
+                <span class="symbol">O</span>
+                <span class="score-count">0</span>
+            </div>
+        </div>
+        <div id="player-form" class="player-form">
+            <h2>Enter Your Name</h2>
+            <form id="name-form">
+                <input type="text" id="player-name" placeholder="Your name" required>
+                <button type="submit">Start Game</button>
+            </form>
+        </div>
+        <div class="player-selection">
+            <p>Choose your symbol:</p>
+            <div class="symbol-buttons">
+                <button id="choose-x" class="symbol-btn">X</button>
+                <button id="choose-o" class="symbol-btn">O</button>
+            </div>
+        </div>
+        <div class="game-board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <button id="restart-btn" class="restart-btn">Reset Game</button>
+        <p class="turn-message">Enter your name and choose X or O to start</p>
+        <div class="message-container">
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
