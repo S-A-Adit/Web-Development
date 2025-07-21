@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Todo List</h2>
+                <button class="add-task-btn">
+                    <i class="fas fa-plus"></i> Add Task
+                </button>
+            </div>
+            <div class="sidebar-tabs">
+                <div class="tab active" data-tab="all">
+                    <i class="fas fa-tasks"></i>
+                    <span>All Tasks</span>
+                </div>
+                <div class="tab" data-tab="today">
+                    <i class="fas fa-calendar-day"></i>
+                    <span>Today</span>
+                </div>
+                <div class="tab" data-tab="week">
+                    <i class="fas fa-calendar-week"></i>
+                    <span>This Week</span>
+                </div>
+                <div class="tab" data-tab="priority">
+                    <i class="fas fa-exclamation"></i>
+                    <span>Priority</span>
+                </div>
+                <div class="tab" data-tab="projects">
+                    <i class="fas fa-folder"></i>
+                    <span>Projects</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div id="content"></div>
+            
+            <!-- Task Modal (hidden by default) -->
+            <div id="task-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2>Add New Task</h2>
+                    <form id="task-form">
+                        <div class="form-group">
+                            <label for="task-title">Title*</label>
+                            <input type="text" id="task-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="task-description">Description</label>
+                            <textarea id="task-description" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="task-due">Due Date</label>
+                            <input type="date" id="task-due">
+                        </div>
+                        <div class="form-group">
+                            <label for="task-priority">Priority</label>
+                            <select id="task-priority">
+                                <option value="1">P1</option>
+                                <option value="2">P2</option>
+                                <option value="3" >P3</option>
+                                <option value="4" selected>P4</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="task-project">Project</label>
+                            <input type="text" id="task-project" placeholder="Optional">
+                        </div>
+                        <button type="submit" class="submit-btn">Add Task</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
