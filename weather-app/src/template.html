@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Weather Forecast</h1>
+        <p>Get accurate weather information for any location</p>
+      </header>
+
+      <main>
+        <section class="search-section">
+          <form id="weather-form">
+            <div class="input-group">
+              <input
+                type="text"
+                id="location"
+                placeholder="Enter city or zip code"
+                required
+              />
+              <button type="submit" class="search-btn">
+                <i class="fas fa-search"></i> Search
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="weather-display">
+          <div class="weather-card">
+            <div class="weather-header">
+              <h2 id="city-name">--</h2>
+              <p id="current-date">--</p>
+            </div>
+
+            <div class="weather-main">
+              <div class="temperature-section">
+                <div class="current-temp">
+                  <span id="temperature">--</span>
+                  <span class="unit">°C</span>
+                </div>
+                <div class="weather-condition" id="weather-condition">--</div>
+              </div>
+
+              <div class="weather-icon">
+                <i class="fas fa-sun" id="weather-icon"></i>
+              </div>
+            </div>
+
+            <div class="weather-details">
+              <div class="detail-item">
+                <i class="fas fa-temperature-high"></i>
+                <span>Feels like: <span id="feels-like">--</span>°C</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-tint"></i>
+                <span>Humidity: <span id="humidity">--</span>%</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-wind"></i>
+                <span>Wind: <span id="wind-speed">--</span> km/h</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-compress-alt"></i>
+                <span>Pressure: <span id="pressure">--</span> hPa</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>© 2023 Weather Forecast App | Powered by OpenWeatherMap</p>
+      </footer>
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
