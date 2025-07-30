@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battleship Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Battleship</h1>
+    <div id="game-message">Welcome to Battleship!</div>
+
+    <div id="placement-controls" class="controls">
+      <button id="rotate-btn">
+        Rotate Ship (Vertical: <span id="rotate-status">No</span>)
+      </button>
+      <button id="random-btn">Place Ships Randomly</button>
+    </div>
+
+    <div class="game-container">
+      <div class="board-container">
+        <h2>Your Board</h2>
+        <div id="player-board" class="game-board"></div>
+      </div>
+
+      <div class="board-container">
+        <h2>Computer's Board</h2>
+        <div id="computer-board" class="game-board"></div>
+      </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
