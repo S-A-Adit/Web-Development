@@ -1,0 +1,7 @@
+<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+//LinkedIn Icon
+<i class="devicon-linkedin-plain"></i>
+<i class="devicon-github-original"></i>
+<i class="devicon-twitter-original"></i>
+          
+          
