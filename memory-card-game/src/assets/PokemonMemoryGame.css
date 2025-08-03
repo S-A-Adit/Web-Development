@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Arial', sans-serif;
+}
+
+.game-container {
+  width: 95vw;
+  /* Changed from 95% to viewport width */
+  max-width: none;
+  /* Removed max-width constraint */
+  margin: 1rem auto;
+  padding: 2rem 1rem;
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.game-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.game-header h1 {
+  font-family: 'Pokemon Solid', sans-serif;
+  color: #ffcb05;
+  text-shadow: 3px 3px 6px #3d7dca;
+  font-size: min(5vw, 3.5rem);
+  /* Responsive font size */
+  margin: 0.5rem 0;
+}
+
+.scores {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+.score {
+  font-weight: bold;
+  color: #3d7dca;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: min(3vw, 2rem);
+  /* Responsive font size */
+  padding: 0.5rem min(3vw, 2rem);
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(180px, 20vw), 1fr));
+  gap: min(3vw, 2.5rem);
+  margin: 0 auto;
+  justify-items: center;
+  width: 100%;
+}
+
+.pokemon-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  width: min(180px, 18vw);
+  /* Responsive card width */
+  padding: min(2vw, 1.5rem);
+}
+
+.pokemon-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-card img {
+  width: min(150px, 15vw);
+  /* Responsive image size */
+  height: min(150px, 15vw);
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.pokemon-card p {
+  margin-top: 1.5rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #333;
+  font-size: min(2vw, 1.5rem);
+}
+
+/* Game Over Modal */
+.game-over {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 3rem 4rem;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  text-align: center;
+  max-width: 500px;
+  width: min(90vw, 600px);
+}
+
+.game-over h2 {
+  font-size: min(4vw, 2.5rem);
+  color: #ff3e3e;
+  margin-bottom: 1rem;
+
+}
+
+.game-over p {
+  font-size: min(3vw, 1.8rem);
+  margin-bottom: 2rem;
+}
+
+.game-over button {
+  background: #ffcb05;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-over button:hover {
+  background: #f8d030;
+  transform: scale(1.05);
+}
+
+/* Loading State */
+.loading {
+  font-size: min(4vw, 2.5rem);
+  margin: 5rem 0;
+  color: #3d7dca;
+  text-align: center;
+}
+
+/* Add Pokemon Font */
+@font-face {
+  font-family: 'Pokemon Solid';
+  src: url('https://fonts.cdnfonts.com/css/pokemon-solid');
+}
