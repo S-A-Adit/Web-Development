@@ -1,0 +1,23 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<div class="container mt-4">
+  <h1><%= typeof title !== 'undefined' ? title : 'Default Title' %></h1>
+  
+  <% if (typeof categories !== 'undefined' && categories.length > 0) { %>
+    <div class="list-group">
+      <% categories.forEach(category => { %>
+        <a href="/categories/<%= category.id %>" class="list-group-item list-group-item-action">
+          <h5><%= category.name %></h5>
+          <% if (category.description) { %>
+            <p class="mb-1"><%= category.description %></p>
+          <% } %>
+        </a>
+      <% }); %>
+    </div>
+  <% } else { %>
+    <div class="alert alert-info">No categories found. Create one!</div>
+  <% } %>
+  
+  <a href="/categories/new" class="btn btn-primary mt-3">Add New Category</a>
+</div>
