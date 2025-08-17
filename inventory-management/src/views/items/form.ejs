@@ -1,0 +1,36 @@
+
+
+<div class="list-container">
+  <h1 class="main-title"><%= title %></h1>
+
+<form action="<%= (typeof item !== 'undefined' && item) ? '/items/' + item.id + '/update' : '/items/create' %>" method="POST" class="form">
+  <div class="form-group">
+    <label for="name" class="form-label">Name:</label>
+    <input type="text" id="name" name="name" class="form-control" required 
+           value="<%= (typeof item !== 'undefined' && item) ? item.name : '' %>">
+  </div>
+
+  <div class="form-group">
+    <label for="description" class="form-label">Description:</label>
+    <textarea id="description" name="description" class="form-control">
+      <%= (typeof item !== 'undefined' && item) ? item.description : '' %>
+    </textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="category" class="form-label">Category:</label>
+    <select id="category" name="category" class="form-control" required>
+      <% categories.forEach(category => { %>
+        <option value="<%= category.id %>"
+          <%= (typeof item !== 'undefined' && item && item.category_id == category.id) ? 'selected' : '' %>>
+          <%= category.name %>
+        </option>
+      <% }); %>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">
+    <%= (typeof item !== 'undefined' && item) ? 'Update' : 'Create' %> Item
+  </button>
+</form>
+</div>

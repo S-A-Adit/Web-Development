@@ -1,0 +1,25 @@
+<div class="list-container">
+  <h1 class="main-title"><%= title %></h1>
+
+  <% if (typeof error !== 'undefined') { %>
+    <div class="alert alert-danger"><%= error %></div>
+  <% } %>
+
+  <form class="form" action="<%= formAction %>" method="POST">
+    <div class="form-group">
+      <label class="form-label" for="name">Name:</label>
+      <input class="form-control" type="text" id="name" name="name" required 
+             value="<%= category.name || '' %>">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="description">Description:</label>
+      <textarea class="form-control" id="description" name="description">
+        <%= category.description || '' %>
+      </textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Save</button>
+    <a class="btn btn-secondary" href="/categories">Cancel</a>
+  </form>
+</div>
