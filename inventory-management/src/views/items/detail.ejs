@@ -1,0 +1,31 @@
+
+
+<div class="detail-card">
+  <h1 class="main-title">Item: <%= item.name %></h1>
+  
+  <div class="detail-item">
+    <span class="detail-label">Description:</span>
+    <span><%= item.description %></span>
+  </div>
+  
+  <div class="detail-item">
+    <span class="detail-label">Price:</span>
+    <span>$<%= item.price.toFixed(2) %></span>
+  </div>
+  
+  <div class="detail-item">
+    <span class="detail-label">Quantity:</span>
+    <span><%= item.quantity %></span>
+  </div>
+  
+  <div class="detail-item">
+    <span class="detail-label">Category ID:</span>
+    <span><%= item.category_id %></span>
+  </div>
+
+  <div class="action-links">
+    <a href="/items/<%= item.id %>/update" class="btn btn-primary">Edit Item</a>
+    <a href="/items/<%= item.id %>/delete" class="btn btn-danger">Delete Item</a>
+    <a href="/items" class="btn">Back to Items</a>
+  </div>
+</div>
